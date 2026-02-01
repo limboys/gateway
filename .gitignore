@@ -1,0 +1,38 @@
+# Environment
+.env
+
+# Logs
+logs/
+*.log
+
+# Docker
+docker-compose.override.yml
+
+# Data
+*.tsv
+*.csv
+urls.txt
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Backup files
+*.backup
+*.bak
+
+docs/OPENRESTY_PROXY_TASK.md
+
+*.tar.gz

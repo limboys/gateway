@@ -1,0 +1,30 @@
+# prometheus.yml - Prometheus 配置文件
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: 'api-proxy'
+    environment: 'production'
+
+# 抓取配置
+scrape_configs:
+  # API Proxy 指标
+  - job_name: 'api-proxy'
+    static_configs:
+      - targets: ['api-proxy:8080']
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+    scrape_timeout: 5s
+    # 多副本部署时可在 targets 中列出所有实例
+
+# 告警规则
+rule_files:
+  # - 'alerts.yml'
+
+# Alertmanager 配置（可选）
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets:
+#           - 'alertmanager:9093'
