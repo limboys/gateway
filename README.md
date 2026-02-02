@@ -1,2 +1,2 @@
 # gateway
-a demo gateway
+this is a demo gateway
